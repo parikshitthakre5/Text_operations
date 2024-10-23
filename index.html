@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Operation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .oswald-unique1 {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400; /* Replace <weight> with an actual number */
+        font-style: normal;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #eff0f3;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .inpbox {
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+        min-height: 150px;
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .btncont {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 20px auto;
+      }
+      .btn {
+        width: 15%;
+        padding: 6px 0px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background-color: #ff8e3c;
+        color: white;
+        font-weight: 900;
+       
+      }
+      .btn:hover {
+        transition: 0.3sec;
+        background-color: #A7C421;
+      }
+
+      @media screen and (max-width:500px){
+        .btncont{
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          
+        }
+        .btn {
+          width: 150px;
+          margin-top:10px ;
+          padding: 10px;
+        }
+        .inpbox{
+        min-height: 90px;
+        font-weight: 20px;
+
+      }
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="oswald-unique1 align-center head">String Operations</h1>
+    <input
+      type="text"
+      id="inp1"
+      class="inpbox"
+      placeholder="Please enter the Input text here"
+    />
+    <input
+      type="text"
+      id="inp2"
+      class="inpbox"
+      placeholder="Output Text will be displayed here"
+    />
+
+    <div class="btncont">
+      <button class="btn" onclick="Stringoper('UpperCase')">Uppercase</button>
+      <button class="btn" onclick="Stringoper('LowerCase')">Lowercase</button>
+      <button class="btn" onclick="Stringoper('WordCount')">Word Count</button>
+      <button class="btn" onclick="Stringoper('CharacterCount')">
+        Character Count
+      </button>
+    </div>
+
+    <script>
+      function Stringoper(op) {
+        const input = document.getElementById("inp1");
+        const output = document.getElementById("inp2");
+        //   function upper() {
+        //      output.value = input.value.toUpperCase();
+        //   }
+
+        //   function lower(){
+        //     output.value = input.value.toLowerCase();
+        //   }
+
+        //   function wordcount(){
+        //     output.value = `Word Count is : ${input.value.split(" ").length}`;
+        //   }
+
+        //   function charactercount(){
+        //     output.value = `Character Count :${input.value.length}`;
+        //   }
+
+        //   If Else Ladder
+
+        //   function Stringoper(op) {
+        //     if (op == "UpperCase") {
+        //       output.value = input.value.toUpperCase();
+        //     }
+        //     else if (op == "LowerCase") {
+        //       output.value = input.value.toLowerCase();
+        //     }
+        //     else if (op == "WordCount") {
+        //       output.value = `Word Count is : ${input.value.split(" ").length}`;
+        //     }
+        //     else if (op == "CharacterCount") {
+        //       output.value = `Character Count :${input.value.length}`;
+        //     }
+        //   }
+
+        //   Switch Case
+
+        switch (op) {
+          case "UpperCase":
+            output.value = input.value.toUpperCase();
+            braek;
+
+          case "LowerCase":
+            output.value = input.value.toLowerCase();
+            braek;
+
+          case "WordCount":
+            output.value = `Word Count is : ${input.value.split(" ").length}`;
+            braek;
+
+          case "CharacterCount":
+            output.value = `Character Count :${input.value.length}`;
+            braek;
+        }
+      }
+    </script>
+  </body>
+</html>
